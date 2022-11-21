@@ -1,0 +1,28 @@
+//FONT
+$font: 'Overpass',
+sans-serif;
+
+// COLORS
+$white: #fff;
+$light-grey: #969FAD;
+$medium-grey: #7c8798;
+$dark-blue: #262E38;
+$bg-color: #131518;
+$card-color: linear-gradient(#232A34, #181E27);
+$orange: #FC7614;
+
+//TYPOGRAPHY 
+
+$p-small: 0.875rem; //14px
+$p-medium: 0.94rem; //15px
+$h1-small: 1.5rem;
+$h1-medium: 1.75rem;
+
+
+//BREAKPOINT
+
+@mixin breakpoint {
+    @media (min-width: 650px) {
+        @content;
+    }
+}

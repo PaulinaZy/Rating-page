@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./Sass/style.css">
+  <!--FONT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <main>
+    <article class="rating-start" id="start-page">
+      <div class="circle star-img-container">
+        <img src="./images/icon-star.svg" alt="Picture of a star icon">
+      </div>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <div class="rating-container">
+        <a href="#" class="rating-value circle">1</a>
+        <a href="#" class="rating-value circle">2</a>
+        <a href="#" class="rating-value circle">3</a>
+        <a href="#" class="rating-value circle">4</a>
+        <a href="#" class="rating-value circle">5</a>
+      </div>
+      <a href="#" class="btn" id="btn">Submit</a>
+    </article>
+    <!--ARTICLE RATING END-->
+    <article class="rating-end visible" id="end-page">
+      <img src="./images/illustration-thank-you.svg" alt="Illustration of a mobile">
+      <div class="user-rating" id="user-rating">
+        <p>
+          You selected <span id="chosen-rating"></span> out of 5
+        </p>
+      </div>
+      <h1>Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!
+      </p>
+    </article>
+  </main>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+@use "reset";
+@use "variables"as v;
+
+//GLOBALS 
+
+.circle {
+    background-color: v.$dark-blue;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$medium-grey;
+
+    @include v.breakpoint {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+//BUTTON
+.btn {
+    display: block;
+    background-color: v.$orange;
+    color: v.$white;
+    border-radius: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: v.$p-small;
+    line-height: 1.1rem;
+    letter-spacing: 0.11rem;
+    text-align: center;
+    padding: 0.75rem 0;
+
+    &:hover {
+        background-color: v.$white;
+        color: v.$orange;
+    }
+
+    @include v.breakpoint {
+        font-size: v.$p-medium;
+        padding: 0.7rem 0;
+    }
+}
+
+//TYPOGRAPHY
+h1 {
+    font-size: v.$h1-small;
+    font-weight: 700;
+    line-height: 1.9rem;
+    color: v.$white;
+
+    @include v.breakpoint {
+        font-size: v.$h1-medium;
+        line-height: 2.2rem;
+    }
+}
+
+p {
+    font-size: v.$p-small;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: v.$light-grey;
+
+    @include v.breakpoint {
+        font-size: v.$p-medium;
+        line-height: 1.5rem;
+    }
+}
+
+//LAYOUT
+article {
+    background-image: v.$card-color;
+    width: 20.4rem;
+    height: 360px;
+    border-radius: 0.94rem;
+    box-shadow: 0 0 40px darken(v.$bg-color, 5%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include v.breakpoint {
+        width: 25.75rem;
+        height: 416px;
+        border-radius: 1.88rem;
+    }
+}
+
+
+// ACTIVE & HOVER & VISIBILITY CLASS
+.active {
+    color: v.$white;
+    background-color: v.$medium-grey;
+}
+
+.hover {
+    background-color: v.$orange;
+    color: white;
+}
+
+.visible {
+    display: none;
+}
+
+//MAIN SCSS
+
+body {
+    background: v.$bg-color;
+    font-family: v.$font;
+
+    main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 5%;
+
+        //RATING START
+        .rating-start {
+            padding: 0 1.5rem 0 1.5rem;
+
+
+            @include v.breakpoint {
+                padding: 2rem 2rem 2.7rem 2rem;
+            }
+
+            //RATING START - IMG
+            .star-img-container {
+                margin-bottom: 1rem;
+
+                @include v.breakpoint {
+                    margin-bottom: 1.875rem;
+                }
+
+                img {
+                    width: 0.875rem;
+
+                    @include v.breakpoint {
+                        width: 1.05rem;
+                    }
+                }
+            }
+
+            //RATING START- TEXT
+
+            h1 {
+                margin-bottom: 0.625rem;
+
+                @include v.breakpoint {
+                    margin-bottom: 0.44rem;
+                }
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            //RATING START- RATING
+            .rating-container {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+
+                @include v.breakpoint {
+                    margin-bottom: 2rem;
+                }
+
+                .rating-value {
+                    text-decoration: none;
+
+                    font-size: v.$p-small;
+                    font-weight: 700;
+
+                    @include v.breakpoint {
+                        font-size: v.$p-medium;
+                    }
+                }
+            }
+        }
+
+        //RATING END LAYOUT
+        .rating-end {
+            align-items: center;
+            padding: 2.1rem 1.5rem 2.3rem 1.5rem;
+
+            @include v.breakpoint {
+                padding: 2.8rem 2.5rem 2.8rem 2.5rem;
+            }
+
+            //RATING-END-IMAGE
+            img {
+                width: 9rem;
+                margin-bottom: 1.5rem;
+
+                @include v.breakpoint {
+                    width: 10.1rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            //RATING-END- USER RATING
+            .user-rating {
+                padding: 0.3rem 0.75rem;
+                margin-bottom: 1.5rem;
+                background-color: v.$dark-blue;
+                border-radius: 1.4rem;
+
+                @include v.breakpoint {
+                    padding: 0.25rem 1.25rem;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    color: v.$orange;
+                }
+            }
+
+            //RATING-END TEXT
+            h1 {
+                margin-bottom: 0.625rem;
+
+                @include v.breakpoint {
+                    margin-bottom: 0.4rem;
+                }
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
